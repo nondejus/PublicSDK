@@ -147,13 +147,10 @@ static NSString * const cellID = @"cellId";
 
 - (NSArray<NSNumber *> *)memberGIDArray {
     NSMutableArray *memberGIDs = [NSMutableArray arrayWithCapacity:self.recipients.count];
-    
-    for (int i = 0; i < 13; i++) {
-        [memberGIDs addObject:self.recipients.lastObject.gid];
+
+    for (Contact *contact in self.recipients) {
+        [memberGIDs addObject:contact.gid];
     }
-//    for (Contact *contact in self.recipients) {
-//        [memberGIDs addObject:contact.gid];
-//    }
     
     return memberGIDs;
 }
@@ -178,3 +175,4 @@ static NSString * const cellID = @"cellId";
 }
 
 @end
+
