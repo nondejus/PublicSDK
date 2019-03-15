@@ -8,7 +8,7 @@ First read [goTennaSDKIntro.pdf](goTennaSDKIntro.pdf)
 - [iOS-Public-SDK](ios-public-sdk) - SDK for iOS
 - [python-public-sdk](python-public-sdk) - SDK for Python
 - [goTenna Android SDK JavaDocs](https://gotenna.github.io/PublicSDK/android-public-sdk/javadocs/)
-- [goTenna iOS SDK Docs](https://gotenna.github.io/PublicSDK/ios-public-sdk/GoTennaSDKDocs/html/)
+- [goTenna iOS SDK Docs](https://github.com/gotenna/PublicSDK/tree/master/ios-public-sdk/GoTennaSDKDocs/docs)
 
 Each subdirectory has a readme.txt file that explains how to install and use the SDK.
 
