@@ -144,57 +144,6 @@ class SdkOptionsPresenter
         view.showScanScreenAndFinish();
     }
 
-    void onDoUpdateFirmwareCheck()
-    {
-        // For a firmware update, first we ask the goTenna what its current firmware version is so we can check if an update is needed
-        gtCommandCenter.sendGetSystemInfo(new GTCommandCenter.GTSystemInfoResponseListener()
-        {
-            @Override
-            public void onResponse(final SystemInfoResponseData systemInfoResponseData)
-            {
-                // Now we check to see if their is a newer version of the firmware available from the Amazon Bucket
-                firmwareUpdateHelper.checkForNewFirmwareFile(systemInfoResponseData.getFirmwareVersion(),
-                        new FirmwareUpdateHelper.FirmwareFileDownloadListener()
-                        {
-                            @Override
-                            public void onFirmwareFileDownloaded()
-                            {
-                                if (view == null)
-                                    return;
-
-                                if (firmwareUpdateHelper.shouldDoFirmwareUpdate(systemInfoResponseData))
-                                {
-                                    firmwareUpdateHelper.showFirmwareUpdateDialog(systemInfoResponseData);
-                                }
-                                else
-                                {
-                                    view.showFirmwareVersionAlreadyUpToDateMessage();
-                                }
-                            }
-
-                            @Override
-                            public void onFirmwareFileDownloadFailed()
-                            {
-                                if (view == null)
-                                    return;
-
-                                view.showLatestFirmwareNotDownloadedMessage();
-                            }
-                        });
-            }
-        }, new GTErrorListener()
-        {
-            @Override
-            public void onError(GTError error)
-            {
-                if (view == null)
-                    return;
-
-                view.showSystemInfoErrorMessage();
-            }
-        });
-    }
-
     void onDestroy()
     {
         this.firmwareUpdateHelper = null;

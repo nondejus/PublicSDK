@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.gotenna.sdk.responses.SystemInfoResponseData;
 import com.gotenna.sdk.sample.R;
+import com.gotenna.sdk.sample.firmware.FirmwareUpdateActivity;
 import com.gotenna.sdk.sample.messages.BroadcastMessagesActivity;
 import com.gotenna.sdk.sample.groups.CreateGroupActivity;
 import com.gotenna.sdk.sample.groups.GroupMessagesActivity;
@@ -115,7 +116,7 @@ public class SdkOptionsActivity extends AppCompatActivity implements SdkOptionsV
 
     public void onUpdateFirmwareButtonClicked(View v)
     {
-        presenter.onDoUpdateFirmwareCheck();
+        FirmwareUpdateActivity.start(this);
     }
 
     //==============================================================================================

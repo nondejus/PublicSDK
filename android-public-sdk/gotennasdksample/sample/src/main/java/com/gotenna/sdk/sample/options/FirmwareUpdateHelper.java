@@ -11,8 +11,6 @@ import android.util.Log;
 
 import com.gotenna.sdk.connection.GTConnectionManager;
 import com.gotenna.sdk.data.GTDeviceType;
-import com.gotenna.sdk.firmware.AmazonFirmwareBucket;
-import com.gotenna.sdk.firmware.GTFirmwareAmazonDownloader;
 import com.gotenna.sdk.firmware.GTFirmwareUpdater;
 import com.gotenna.sdk.firmware.GTFirmwareUpdater.FirmwareUpdateState;
 import com.gotenna.sdk.firmware.GTFirmwareUpdater.GTFirmwareUpdaterListener;
@@ -42,7 +40,7 @@ class FirmwareUpdateHelper implements GTFirmwareUpdaterListener
 
     private GTFirmwareVersion latestFirmwareVersion;
     private GTFirmwareUpdater latestFirmwareFileUpdater;
-    private GTFirmwareAmazonDownloader firmwareAmazonDownloader;
+    //private GTFirmwareAmazonDownloader firmwareAmazonDownloader;
 
     //==============================================================================================
     // Constructor
@@ -89,7 +87,7 @@ class FirmwareUpdateHelper implements GTFirmwareUpdaterListener
                     {
                         dialog.cancel();
 
-                        startFirmwareUpdateUsingLatest();
+                        //startFirmwareUpdateUsingLatest();
                     }
                 })
                 .setNegativeButton(R.string.firmware_update_dialog_no, new DialogInterface.OnClickListener()
@@ -102,6 +100,7 @@ class FirmwareUpdateHelper implements GTFirmwareUpdaterListener
                 .show();
     }
 
+    /*
     void checkForNewFirmwareFile(@NonNull final GTFirmwareVersion currentGotennaFirmwareVersion,
                                  @NonNull final FirmwareFileDownloadListener firmwareFileDownloadListener)
     {
@@ -199,8 +198,9 @@ class FirmwareUpdateHelper implements GTFirmwareUpdaterListener
                         dialog.cancel();
                     }
                 }).show();
-    }
 
+    }
+        */
     //==============================================================================================
     // GTFirmwareUpdaterListener Implementation
     //==============================================================================================
@@ -246,12 +246,12 @@ class FirmwareUpdateHelper implements GTFirmwareUpdaterListener
 
                     case UPDATE_FAILED:
                         indeterminateProgressDialog.dismiss();
-                        showFirmwareUpdateCompletedDialog(false);
+                        //showFirmwareUpdateCompletedDialog(false);
                         break;
 
                     case UPDATE_SUCCEEDED:
                         indeterminateProgressDialog.dismiss();
-                        showFirmwareUpdateCompletedDialog(true);
+                        //showFirmwareUpdateCompletedDialog(true);
                         break;
                 }
             }

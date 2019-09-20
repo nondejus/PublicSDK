@@ -22,7 +22,7 @@ public class MyApplication extends Application
     //==============================================================================================
 
     private static final String LOG_TAG = "MyApplication";
-    private static final String GOTENNA_APP_TOKEN = "";// TODO: Insert your token
+    private static final String GOTENNA_APP_TOKEN = "Bw8DX0MQEllBSRBfQRtZQRRcQERDDlgOU0kMUQYDDgAeDgxSWgILXFoeV1QBSRNI";// TODO: Insert your token
     private static Context applicationContext;
 
     //==============================================================================================

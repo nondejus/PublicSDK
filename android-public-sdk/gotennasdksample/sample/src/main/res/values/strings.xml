@@ -83,6 +83,8 @@
 
     <!-- Firmware Update Dialog -->
     <string name="firmware_update_dialog_title">UPDATE FIRMWARE</string>
+    <string name="firmware_update_support_message">To receive your temporary firmware download URL, please reach out to support@gotenna.com</string>
+    <string name="firmware_update_url_hint">Enter the URL to your firmware bin file</string>
     <string name="firmware_update_dialog_message">Update your goTenna\'s Firmware from %1$s to %2$s? This may take anywhere from 10&#8211;15 minutes to complete.</string>
     <string name="firmware_update_dialog_begin_update">BEGIN UPDATE</string>
     <string name="firmware_update_dialog_no">No</string>
