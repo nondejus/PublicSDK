@@ -50,9 +50,8 @@ public class FirmwareUpdatePresenter implements FirmwareUpdateContract.FirmwareU
             @Override
             public void onDownloadedFirmware(GTFirmwareVersion firmwareVersion, byte[] firmwareData)
             {
-                //startUpdate(firmwareVersion, firmwareData);
+                startUpdate(firmwareVersion, firmwareData);
                 Log.d(TAG, "onDownloadedFirmware: " + firmwareVersion.toString() + " is " + firmwareData.length + " bytes");
-                updateView.showFinalUpdateUi();
             }
 
             @Override
@@ -106,9 +105,13 @@ public class FirmwareUpdatePresenter implements FirmwareUpdateContract.FirmwareU
             case UPDATE_SUCCEEDED:
                 updateView.showFinalUpdateUi();
                 break;
+            case INACTIVE:
+                updateView.showFinalUpdateUi();
+                break;
+
         }
 
-        updateView.updateProgressMessage(firmwareUpdateState.toString());
+        //updateView.updateProgressMessage(firmwareUpdateState.toString());
     }
 
     @Override
