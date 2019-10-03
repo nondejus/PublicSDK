@@ -3,6 +3,8 @@ Public Android, iOS and Python SDK's for the goTenna
 
 First read [goTennaSDKIntro.pdf](goTennaSDKIntro.pdf)
 
+NOTE: We have removed the documentation & applications for upgrading your Mesh units to firmware v1.1.12 - This process relied on an architecture that we are no longer going to support. We will be deploying an updated version of the Mesh app to iOS and Android app stores, which will contain firmware v1.1.12 - In the meantime, if you need to upgrade your Mesh, please contact support@gotenna.com, we apologize for the inconvience.
+
 ### Contents
 - [android-public-sdk](android-public-sdk) - SDK for Android
 - [iOS-Public-SDK](ios-public-sdk) - SDK for iOS
